@@ -12,7 +12,12 @@ class Greeter(prefix: String, suffix: String) {
 
 // Case classes are immutable and compared by value.
 // Useful for pattern matching and data records.
-case class Point(x: Int, y: Int)
+case class Point(x: Int, y: Int) {
+  // Method with no arguments.
+  def sum() = x + y
+  // Method without arguments, no () required when accessing it.
+  def product = x * y
+}
 
 // Objects are single instances of their own definitions i.e. singletons of their own class.
 // Objects can be referred to by their name.
